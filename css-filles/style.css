@@ -12,6 +12,8 @@ body{
   font-weight: 400;
   color: #212529;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 ul {
@@ -47,13 +49,13 @@ span{
   background-color: transparent;
   z-index: 2;
   width: 100%;
-  .Call{
+  & .Call{
     font-size: 14px;
     font-weight: 300;
     color: #c8b16f;
     position: relative;
   }
-  .Call::after{
+  & .Call::after{
     content: "";
     position: absolute;
     top: 12px;
@@ -64,18 +66,18 @@ span{
     background-color: #c8b16f;
     z-index: -1;
   }
-#iconsNav{
+  & #iconsNav{
   padding-top: .8rem;
-  svg , i{
+    & svg , i{
     cursor: pointer;
     transition: .3s ease;
   }
-  svg:hover > g, i:hover{
+        & svg:hover > g, i:hover{
     color: #fff !important;
     fill: #fff !important;
   }
 }
-hr{
+    & hr{
   width: 100%;
   height: 1px;
   background-color: #ffffff46;
@@ -87,31 +89,31 @@ hr{
 /* --------------------start nav---------------- */
 .navbar{
   transition: .3s ease;
-  a{
+    & a{
     img{
       width: 80px;
       height: 80px;
     }
   }
-  .nav-link{
+        & .nav-link{
     color: #fff;
   }
-  .dropdown-menu{
+        & .dropdown-menu{
     background-color: #000;
-    .dropdown-item{
+      & .dropdown-item{
       color: #fff;
       font-weight: 200;
       padding: 8px 1rem;
     }
 }
-.dropdown-item:focus,
+    & .dropdown-item:focus,
 .dropdown-item:hover{
   background-color: #c8b16f;
 }
-.navbar-toggler{
+    & .navbar-toggler{
   border: 0;
 }
-.navbar-toggler:focus{
+    & .navbar-toggler:focus{
   box-shadow: unset;
 }
 }
@@ -130,37 +132,37 @@ width: 100%;
 height: 100vh;
 overflow: hidden;
 background: #212529;
-.swiper{
+  & .swiper{
   width: 100%;
   height: 100%;
-.swiper-slide{
-.slideContent{
+  &.swiper-slide{
+  &.slideContent{
   width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
-  .contentBox
+    & .contentBox
 {
   position: absolute;
   top: 50%;
   left: 15%;
   transform: translateY(-50%);
-  p{
+    & p{
     font-size: clamp(1.5rem,5vw,2.5rem);
     color: #fff;
     font-weight: 600;
     letter-spacing: 1px;
   }
-  span{
+        & span{
     font-size: clamp(1rem , 5vw , 2rem);
     color: #fff;
     font-weight: 400;
     letter-spacing: 1px;
     text-transform: capitalize;
   }
-  .mored{
+        & .mored{
     margin-top: 1.5rem;
-    .MoreD {
+      & .MoreD {
       font-family: 'Open Sans', sans-serif;
         line-height: 1;
         text-decoration: none;
@@ -178,7 +180,7 @@ background: #212529;
         text-overflow: ellipsis;
         transition: background-color .3s;
       }
-      .MoreD__icon-wrapper {
+                & .MoreD__icon-wrapper {
         flex-shrink: 0;
         width: 25px;
         height: 25px;
@@ -190,25 +192,25 @@ background: #212529;
         place-items: center;
         overflow: hidden;
       }
-      .MoreD:hover {
+                & .MoreD:hover {
         background-color: transparent;
         color: #c8b16f;
         font-weight: 800;
         font-size: 1.1rem;
       }
-      .MoreD:hover .MoreD__icon-wrapper {
+                & .MoreD:hover .MoreD__icon-wrapper {
         color: #c8b16f;
         background-color: transparent ;
       }
-      .MoreD__icon-svg--copy {
+                & .MoreD__icon-svg--copy {
         position: absolute;
         transform: translate(-150%, 150%);
       }
-      .MoreD:hover .MoreD__icon-svg:first-child {
+                & .MoreD:hover .MoreD__icon-svg:first-child {
         transition: transform .3s ease-in-out;
         transform: translate(150%, -150%);
       }
-      .MoreD:hover .MoreD__icon-svg--copy {
+                & .MoreD:hover .MoreD__icon-svg--copy {
         transition: transform .3s ease-in-out .1s;
         transform: translate(0);
       }
@@ -216,27 +218,27 @@ background: #212529;
 } 
 } 
   }
-.swiper-button-prev,
+    & .swiper-button-prev,
 .swiper-button-next{
   color: aliceblue;
 }
-.swiper-button-next:after,
+    & .swiper-button-next:after,
 .swiper-button-prev:after{
   font-size: 1.5rem;
 }
-.swiper-slide-active {
-  img {
+    & .swiper-slide-active {
+    & img {
     object-fit: cover;
     transform-origin: center;
     animation: skaldwone 4.5s 1;
     transition: all 4.5s ease;
   }
-  .mored {
+        & .mored {
       animation: fadeIn 3s 1;
     }
 }
-.swiper-slide-prev,.swiper-slide-next{
-  img {
+    & .swiper-slide-prev,.swiper-slide-next{
+    & img {
     object-fit: cover;
   }
 }
@@ -245,11 +247,11 @@ background: #212529;
 /* --------------------end two------------------------ */
 /* --------------------start third-------------------- */
 .third{
-.boxThird-1,
+  & .boxThird-1,
 .boxThird-2, 
 .boxThird-3{
   height: 34vh;
-h3{
+  & h3{
   color: #c8b16f ;
   font-size: 1.19rem;
   font-weight: 500;
@@ -258,16 +260,16 @@ h3{
   line-height: normal;
 
 }
-p{
+    & p{
   color: #fff;
   margin: 1.25rem 0 0 0 ;
   font-size: 0.8rem;
   width: 50%;
 }
-> .mored {
+    & > .mored {
   margin-top: 1.25rem;
 
-  .MoreD {
+    & .MoreD {
     font-family: 'Open Sans', sans-serif;
     line-height: 1;
     text-decoration: none;
@@ -286,7 +288,7 @@ p{
     transition: background-color .3s;
   }
 
-  .MoreD__icon-wrapper {
+        & .MoreD__icon-wrapper {
     flex-shrink: 0;
     width: 25px;
     height: 25px;
@@ -299,52 +301,52 @@ p{
     overflow: hidden;
   }
 
-  .MoreD:hover {
+        & .MoreD:hover {
     background-color: transparent;
     color: #c8b16f;
     font-weight: 800;
     font-size: 1.1rem;
   }
 
-  .MoreD:hover .MoreD__icon-wrapper {
+        & .MoreD:hover .MoreD__icon-wrapper {
     color: #c8b16f;
     background-color: transparent;
   }
 
-  .MoreD__icon-svg--copy {
+        & .MoreD__icon-svg--copy {
     position: absolute;
     transform: translate(-150%, 150%);
   }
 
-  .MoreD:hover .MoreD__icon-svg:first-child {
+        & .MoreD:hover .MoreD__icon-svg:first-child {
     transition: transform .3s ease-in-out;
     transform: translate(150%, -150%);
   }
 
-  .MoreD:hover .MoreD__icon-svg--copy {
+        & .MoreD:hover .MoreD__icon-svg--copy {
     transition: transform .3s ease-in-out .1s;
     transform: translate(0);
   }
 }
 }
-.boxThird-1{
+  & .boxThird-1{
   background-image: url(../imgs/sec-third/bg-serv-1.jpg);
 }
-.boxThird-2{
+  & .boxThird-2{
   background-image: url(../imgs/sec-third/bg-serv-2.jpg);
 }
-.boxThird-3{
+  & .boxThird-3{
   background-image: url(../imgs/sec-third/bg-serv-3.jpg);
 }
 }
 /* --------------------end third---------------------- */
 /* --------------------start fourth------------------- */
-.fourth{
+  .fourth{
   padding: .83in 0;
   background-color:#2e333c;
   color: #fff;
-.fourtheader{
-  h4{
+  & .fourtheader{
+    & h4{
     width: 80px;
     font-size: 1.9rem;
     font-weight: 600;
@@ -353,28 +355,28 @@ p{
     padding-left: 3px;
     background-image: url(../imgs/sec-fourth/dot.png);
   }
-  p{
+        & p{
     font-size: .8rem;
   }
 }
-.container-xxl{
+  & .container-xxl{
   padding-top: 4rem;
-  .fourthContent{
-  .forthBox{
-    .fa-2xl{
+    &.fourthContent{
+    &.forthBox{
+      &.fa-2xl{
       line-height: unset;
       font-size: 2.9rem;
       margin-top: -15px;
     }
-  .boxContent{
+        & .boxContent{
   
-    h3{
+      & h3{
       font-size: 1.06rem;
       text-transform: uppercase;
       font-weight: 500;
       color: #c8b16f;
     }
-    p{
+            & p{
       font-size: .8rem;
       width: 95%;
     }
@@ -388,21 +390,21 @@ p{
 .fifth{
   padding: 5rem 0;
   overflow: hidden;
-  .container-xxl{
+    & .container-xxl{
     max-width: 1700px;
     height: 24vh;
     overflow: hidden;
-  .newSwiper{
+    & .newSwiper{
       width: 100%;
       height: 100%;
-  .swiper-slide{
+    & .swiper-slide{
     cursor: pointer;
     overflow: hidden;
     position: relative;
-    a{
+      & a{
       width: 100%;
       height: 100%;
-      img{
+        & img{
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -410,7 +412,7 @@ p{
         transition: 1s ease;
       }
     }
-    .slideContent{
+            & .slideContent{
       position: absolute;
       width: 100%;
       height: 100%;
@@ -419,7 +421,7 @@ p{
       opacity: 0;
       transition: all .8s ease;
       padding: 1rem;
-      .slideContentBox{
+        & .slideContentBox{
         height: 100%;
         outline: 1px solid #c8b16f;
         background-color: #2e333ca1;
@@ -428,21 +430,21 @@ p{
         justify-content: center;
         flex-direction: column;
         align-content: center;
-      h3{
+        & h3{
         font-size: .88rem;
         font-weight: 500;
         letter-spacing: 1px;
         color: #fff;
         margin: 0;
       }
-      p{
+                & p{
         font-size: .67rem;
         font-weight: 300;
         letter-spacing: 3px;
         color: #fff;
         
       }
-      span{
+                & span{
         width: 50%;
         border-top: 1px solid #c8b16f;
         margin: .5rem 0;
@@ -451,15 +453,15 @@ p{
     }
     }
   }
-    .swiper-slide:hover > a img{
+            & .swiper-slide:hover > a img{
       transform: scale(1.1);
     }
-    .swiper-slide:hover > .slideContent{
+            & .swiper-slide:hover > .slideContent{
       top:0;
       opacity: 1;
       /* animation: fadeInDown .8s 1; */
     }
-.swiper-button-prev,
+    & .swiper-button-prev,
 .swiper-button-next{
   background-color: #212529;
   padding: 1.5rem;
@@ -467,14 +469,14 @@ p{
   transition: .3s ease-out;
 }
 
-.swiper-button-prev:hover,
+    & .swiper-button-prev:hover,
 .swiper-button-next:hover{
   opacity: 1;
 }
 
 
 
-    .swiper-button-prev::after,
+            & .swiper-button-prev::after,
     .swiper-button-next::after{
           font-size: 0;
           width: 0;
@@ -487,50 +489,50 @@ p{
 /* --------------------start sixth-------------------- */
 .sixth{
   padding: 0 0 0 0 ;
-  .container-fluid{
+    & .container-fluid{
     background-color: #2e333c;
-  .row > div:nth-child(1){
+    & .row > div:nth-child(1){
     padding: 5.625rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    .sixthSwap{
+      & .sixthSwap{
       width: 100%;
       height: 100%;
-      .NewSwiper{
+        & .NewSwiper{
         width: 100%;
         height: 100%;
-      .SLiderSIxthBox{
-        blockquote{
+        & .SLiderSIxthBox{
+          & blockquote{
           padding: 2.5rem;
           border: 1px solid #c8b16f;
           font-style: italic;
-        p{
+          & p{
           line-height: 40px;
           font-size: .8rem;
           color: #fff;
         }
-        small{
+                    & small{
           display: block;
           font-size: .65rem;
           line-height: 1.5;
           color: #777;
-          cite{
+            & cite{
             color: #c8b16f;
           }
         }
         }
-      figure{
+                & figure{
         width: 100%;
         height: 100%;
-        img{
+          & img{
           width: 100px;
           height: 100px;
           object-fit: cover;
           object-position: center;
           border-radius: 50%;
         }
-        figcaption{
+                    & figcaption{
         display: inline-block;
         font-size: 1.13rem;
         color: #c8b16f;
@@ -539,22 +541,22 @@ p{
       }
       }
       }
-    .swiper-pagination{
+            & .swiper-pagination{
       text-align: end;
     }
-    .swiper-pagination-bullet-active{
+            & .swiper-pagination-bullet-active{
       background-color: #c8b16f;
         }
-    .swiper-pagination-bullet{
+            & .swiper-pagination-bullet{
       width:10px;
       height: 10px;
       border-radius: 5%;
         }
     }
   }
-  .row > div:nth-child(2){
+        & .row > div:nth-child(2){
     padding: 0;
-    .SixthBoxPhoto{
+      & .SixthBoxPhoto{
       width: 100%;
       height: 100%;
     background-image: url(../imgs/sec-sixth/bg-testi.jpg);
@@ -568,13 +570,13 @@ p{
 /* --------------------start seventh------------------ */
 .seventh{
   padding: 0;
-.container-xxl{
-.svengthHead{
+  & .container-xxl{
+  & .svengthHead{
   padding: 5rem 0;
-  .HeadBox{
+    & .HeadBox{
     padding: 2.5rem 0;
   background-color: #2e333c;
-  p{
+    & p{
     color: #fff;
     text-align: center;
     font-size: 1.88rem;
@@ -583,9 +585,9 @@ p{
     margin: 0;
     height: auto;
   }
-    .mored {
+            & .mored {
   
-      .MoreD {
+        & .MoreD {
         font-family: 'Open Sans', sans-serif;
         line-height: 1;
         text-decoration: none;
@@ -604,7 +606,7 @@ p{
         transition: background-color .3s;
       }
   
-      .MoreD__icon-wrapper {
+                & .MoreD__icon-wrapper {
         flex-shrink: 0;
         width: 25px;
         height: 25px;
@@ -617,49 +619,49 @@ p{
         overflow: hidden;
       }
   
-      .MoreD:hover {
+                & .MoreD:hover {
         background-color: transparent;
         color: #c8b16f;
         font-weight: 800;
         font-size: 1.1rem;
       }
   
-      .MoreD:hover .MoreD__icon-wrapper {
+                & .MoreD:hover .MoreD__icon-wrapper {
         color: #c8b16f;
         background-color: transparent;
       }
   
-      .MoreD__icon-svg--copy {
+                & .MoreD__icon-svg--copy {
         position: absolute;
         transform: translate(-150%, 150%);
       }
   
-      .MoreD:hover .MoreD__icon-svg:first-child {
+                & .MoreD:hover .MoreD__icon-svg:first-child {
         transition: transform .3s ease-in-out;
         transform: translate(150%, -150%);
       }
   
-      .MoreD:hover .MoreD__icon-svg--copy {
+                & .MoreD:hover .MoreD__icon-svg--copy {
         transition: transform .3s ease-in-out .1s;
         transform: translate(0);
       }
     }
 }
   }
-.seventhContent{
+    & .seventhContent{
   padding-bottom: 5rem;
-  .logoSwipe{
+    & .logoSwipe{
     width: 100%;
     height: 100px;
-  .LSwiper{
+    & .LSwiper{
     width: 100%;
     height: 100%;
-    .swiper-slide{
+      & .swiper-slide{
       text-align: center;
-      .Logo {
+        &.Logo {
         width: 100%;
         height: 100%;
-      img{
+        &img{
         width: unset !important;
         height: unset !important;
         object-fit: contain;
@@ -677,22 +679,22 @@ p{
 footer{
   background-color:#090c0d;
   padding: 5rem 0;
-  .row{
-    span{
+    & .row{
+      & span{
       display: block;
       font-size: .75rem;
       color: #fff;
-      a{
+        & a{
         display: inline-block;
         color: inherit;
         font-size: inherit;
       }
     }
-  .footerLogo>a{
+        & .footerLogo>a{
     width: fit-content;
     text-align: center;
     margin: auto;
-    img{
+      & img{
       width: unset !important;
       height:39px  !important;
       object-fit: contain;

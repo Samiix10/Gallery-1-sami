@@ -1,14 +1,14 @@
 @media (width < 768px) {
   .swiper .swiper-slide-active {
-      img {
+        & img {
         width:100% !important;
         transform-origin:45% 50% !important ;
         object-position: 40%  50%;
       }
-        .contentBox > p {
+                    & .contentBox > p {
         animation: bounceInDown 1.5s 1 ;
       }
-          .contentBox > span{
+                        & .contentBox > span{
         animation: bounceInRight 1.5s 1;
       }
     }
@@ -17,14 +17,14 @@
   @media (width > 992px) {
     .swiper-slide-active {
       
-    .contentBox > p {
+      & .contentBox > p {
       animation: bounceInRight 1.5s 1;
     }
-        .contentBox > span{
+                    & .contentBox > span{
           animation: bounceInLeft 1.5s 1;
   
     }
-        .mored{
+                    & .mored{
           animation: fadeIn 3s 1;
         }
     }
@@ -57,11 +57,11 @@
 
 @media ( 991px < width < 1250px) {
   .sixth {
-    .container-fluid {
-      .row > div:nth-child(1){
+      & .container-fluid {
+        & .row > div:nth-child(1){
         width: 100% !important;
       }
-  .row > div:nth-child(2){
+        & .row > div:nth-child(2){
     display: none !important;
   }
 }
@@ -74,15 +74,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    figcaption{
+      & figcaption{
       margin-top: .9rem;
     }
   }
 .row >div:nth-child(1){
-  .NewSwiper{
+    & .NewSwiper{
     padding-bottom: 1.5rem;
   }
-.swiper-pagination {
+    & .swiper-pagination {
     text-align: center !important;
     bottom: 0px;
     
@@ -98,14 +98,14 @@
 
 @media ( width < 1250px) {
 .seventh{
-.container-xxl{
-.svengthHead{
-.HeadBox{
+  & .container-xxl{
+  & .svengthHead{
+  & .HeadBox{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items:center;
-.mored {
+  & .mored {
   margin-top: 1rem ;
 }
 }
