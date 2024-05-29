@@ -135,8 +135,8 @@ background: #212529;
   & .swiper{
   width: 100%;
   height: 100%;
-  &.swiper-slide{
-  &.slideContent{
+  & .swiper-slide{
+  & .slideContent{
   width: 100%;
   height: 100%;
   position: relative;
@@ -658,10 +658,10 @@ background: #212529;
     height: 100%;
       & .swiper-slide{
       text-align: center;
-        &.Logo {
+        & .Logo {
         width: 100%;
         height: 100%;
-        &img{
+        & img{
         width: unset !important;
         height: unset !important;
         object-fit: contain;
