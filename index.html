@@ -861,7 +861,7 @@
     AOS.init();
   </script>
   <script type="module">
-    import PhotoSwipeLightbox from '/js-filles/photoswipe/dist/photoswipe-lightbox.esm.js';
+    import PhotoSwipeLightbox from './js-filles/photoswipe/dist/photoswipe-lightbox.esm.js';
     const backEasing = {
         in: 'cubic-bezier(0.6, -0.28, 0.7, 1)',
       };
@@ -878,7 +878,7 @@
       counter: false,
       arrowKeys: false,
       closeOnVerticalDrag: true,
-      pswpModule: () => import('/js-filles/photoswipe/dist/photoswipe.esm.js')
+      pswpModule: () => import('./js-filles/photoswipe/dist/photoswipe.esm.js')
     });
     lightbox.on('close', () => {
         lightbox.pswp.options.easing = backEasing.in;
