@@ -12,8 +12,6 @@ body{
   font-weight: 400;
   color: #212529;
   overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 ul {
