@@ -90,7 +90,7 @@ span{
 .navbar{
   transition: .3s ease;
     & a{
-    img{
+    & img{
       width: 80px;
       height: 80px;
     }
